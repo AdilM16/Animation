@@ -1,0 +1,41 @@
+div {
+  animation: mymove 1s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: 2;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+
+}
+div:hover {
+  animation-play-state: paused;
+}
+@keyframes mymove {
+    from {left: 0px;} /* 0% */
+    to {left: 200px;} /* 100% */
+}
+@keyframes mymove {
+  from {left: 0px; top: 0px}
+  25% {background-color: lightblue; left:200px; top: 0px}
+  50% {background-color: lightgreen; left: 200px; top: 200px}
+  75% {background-color: lightyellow; left: 0px; top: 200px}
+  100% {background-color: lightpink; top: 0px; top: 0px}
+}
+
+#bounce-title {
+  animation: bounce 1s;
+  animation-timing-function: ease;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  position: relative;
+}
+
+@keyframes bounce {
+  0% {
+    bottom: 100px;
+  }
+  100% {
+    bottom: 0%;
+    transform: scaleY(0.5);
+  }
+}
